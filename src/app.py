@@ -10,7 +10,7 @@ mpDraw = mp.tasks.vision.drawing_utils
 
 options = mpHand.HandLandmarkerOptions(
     base_options=mp.tasks.BaseOptions(
-        model_asset_path="hand_landmarker.task"
+        model_asset_path="../hand_landmarker.task"
     ),
     running_mode=mpHand.RunningMode.VIDEO,
     num_hands=2,
