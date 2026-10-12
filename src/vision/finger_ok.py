@@ -14,7 +14,7 @@ def finger_ok(landmarks) -> bool:
 
 options = mpHands.HandLandmarkerOptions(
     base_options=mp.tasks.BaseOptions(
-        model_asset_path="../hand_landmarker.task"
+        model_asset_path="../models/hand_landmarker.task"
     ),
     num_hands=2
 )

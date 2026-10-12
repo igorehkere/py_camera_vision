@@ -6,7 +6,7 @@ mpDraw = mp.tasks.vision.drawing_utils
 
 options = mpHand.HandLandmarkerOptions(
     base_options=mp.tasks.BaseOptions(
-        model_asset_path="../hand_landmarker.task"
+        model_asset_path="../models/hand_landmarker.task"
     ),
     num_hands=2
 )
@@ -15,12 +15,18 @@ hands = mpHand.HandLandmarker.create_from_options(options)
 
 def count_fingers(landmarks) -> int:
     fingers = []
-    fingers.append(landmarks[4].x < landmarks[3].x)
+
+    if landmarks[1].x < landmarks[0].x:
+        fingers.append(landmarks[4].x < landmarks[3].x)
+
+    else:
+        fingers.append(landmarks[4].x > landmarks[3].x)
 
     for tips in [8, 12, 16, 20]:
         fingers.append(landmarks[tips].y < landmarks[tips - 2].y)
 
     return fingers.count(True)
+
 
 camera = cv2.VideoCapture(0)
 
@@ -33,7 +39,6 @@ while True:
     if result.hand_landmarks:
         for hand in result.hand_landmarks:
             finger_count = count_fingers(hand)
-            print(finger_count)
             h, w, c = cam.shape
 
             for lm in hand:
