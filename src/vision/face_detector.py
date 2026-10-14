@@ -1,7 +1,6 @@
 from pathlib import Path
-
 import cv2
-import numpy as np
+from src.database.update_db import add_user
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -48,8 +47,13 @@ while True:
         alignedFace = faceRecognizer.alignCrop(img, faces[0])
         embedding = faceRecognizer.feature(alignedFace) # Вектор признаков лица
 
-        print("Вектор:")
-        print(embedding)
+        try:
+            add_user('TESTName', 'TESTLastName', embedding)
+            print('User saved')
+        except Exception as err:
+            print(f"Unexpected {err=}, {type(err)=}")
+            raise
+
 
     elif cv2.waitKey(1) & 0xFF == ord("q"):
         break

@@ -4,9 +4,10 @@ db = sqlite3.connect('users.db')
 
 c = db.cursor()
 c.execute("""CREATE TABLE user (
-    first_name text,
-    last_name text,
-    vector_face text
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    vector_face BLOB NOT NULL
 )""")
 
 db.commit()
