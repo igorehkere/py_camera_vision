@@ -1,4 +1,4 @@
-from src.ui.MainWindow import MainWindow
+from ui.MainWindow import MainWindow
 from PyQt6.QtWidgets import QApplication
 import signal
 import sys
