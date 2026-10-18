@@ -8,6 +8,8 @@ The application detects faces in a video stream,
 compares their features with those stored in SQLite, and displays the first and last name of the recognized person. 
 Unknown faces are marked as `Unknown`. New users can be registered via the PyQt6 interface: their first and last name, and facial feature vector, are stored in the database.
 
+<img width="1536" height="1024" alt="Detect Human App Over Scenic Landscape" src="https://github.com/user-attachments/assets/378de72a-d46b-43b9-9a38-c8cbe4bcd39a" />
+
 ## Technologies
 
 - Python
