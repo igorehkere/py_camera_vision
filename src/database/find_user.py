@@ -8,7 +8,7 @@ import numpy as np
 def find_user(vector, faceRecognizer) -> Union[None, tuple[int, str, str]]:
     best_similarity = -1.0
     best_user = None
-    with sqlite3.connect("../database/users.db") as db:
+    with sqlite3.connect("./database/users.db") as db:
         users = db.execute("""
             SELECT id, first_name, last_name, vector_face
             FROM user
