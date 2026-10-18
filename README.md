@@ -1,3 +1,5 @@
+<a id="readme-top"></a>
+
 # Py Camera Vision
 
 **Py Camera Vision** is a Python application for webcam face recognition.
@@ -16,29 +18,29 @@ Unknown faces are marked as `Unknown`. New users can be registered via the PyQt6
 
 ## Structure
 
-Py_camera_vision/
-└── src/
-    ├── database/
-    │    ├── create_bd.py/
-    │    ├── find_user.py/
-    │    ├── update_db.py/
-    │    └── users.db/
-    ├── models/
-    │    ├── face_detection_yunet_2023mar.onnx/
-    │    ├── face_recognition_sface_2021dec.onnx/
-    │    └── hand_landmarker.task/
-    ├── ui/
-    │    └── MainWindow.py/
-    ├── vision/
-    │    ├── face_detector.py/
-    │    ├── finger_count.py/
-    │    └── finger_ok.py/
+Py_camera_vision\
+└── src\
+    ├── database\
+    │    ├── create_bd.py\
+    │    ├── find_user.py\
+    │    ├── update_db.py\
+    │    └── users.db\
+    ├── models\
+    │    ├── face_detection_yunet_2023mar.onnx\
+    │    ├── face_recognition_sface_2021dec.onnx\
+    │    └── hand_landmarker.task\
+    ├── ui\
+    │    └── MainWindow.py\
+    ├── vision\
+    │    ├── face_detector.py\
+    │    ├── finger_count.py\
+    │    └── finger_ok.py\
     └── main.py
 
 ## Install & start
 
 1. Cloning and installing addictions
-    ```bash
+    ``` bash
     git clone https://github.com/igorehkere/py_camera_vision.git
     cd py_camera_vision
     python3 -m venv .venv
@@ -58,3 +60,12 @@ Py_camera_vision/
     python3 main.py
     ```
 
+## License
+
+MIT
+
+## Author
+
+Igorehkere
+
+<p align='right'><a href='#readme-top'>Back to top</a></p>
