@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Опознование человека")
+        self.setWindowTitle("DETECT HUMAN")
 
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
